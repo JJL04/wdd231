@@ -41,9 +41,24 @@
             <h2>Our Mission</h2>
             <p>To empower local businesses through community involvement and collaboration.</p>
         </section>
+        <!-- Course List Section -->
+        <section>
+            <h2>Courses</h2>
+            <div>
+                <label for="courseFilter">Filter Courses:</label>
+                <select id="courseFilter" onchange="filterCourses()">
+                    <option value="all">All</option>
+                    <option value="business">Business</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </div>
+            <ul id="courseList">
+                <!-- Dynamically added course list will go here -->
+            </ul>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2025 Timbuktu Chamber of Commerce</p>
+        <p>&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
 </body>
