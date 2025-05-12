@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory - Timbuktu Chamber of Commerce</title>
+    <meta name="description" content="Directory of local businesses in Timbuktu, part of the Timbuktu Chamber of Commerce project by Jayden Luke.">
+    <meta name="author" content="Jayden Luke">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Timbuktu Chamber Directory">
+    <meta property="og:description" content="Explore local businesses in Timbuktu.">
+    <meta property="og:image" content="images/chamber-logo.png">
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Member Directory</h1>
+        <div class="view-toggle">
+            <button onclick="toggleView('grid')">Grid View</button>
+            <button onclick="toggleView('list')">List View</button>
+        </div>
+        <section id="members" class="grid-view"></section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("lastModified").textContent = document.lastModified;
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
