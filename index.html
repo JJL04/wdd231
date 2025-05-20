@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Timbuktu Chamber of Commerce - Jayden Luke</title>
-    <meta name="description" content="Timbuktu Chamber of Commerce home page, created by Jayden Luke as part of the W01 assignment for web development. It features navigation, courses, and mission information for local businesses.">
-    <meta name="author" content="Jayden Luke">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script2.js" defer></script>
+    <meta name="description" content="Timbuktu Chamber of Commerce home page, created by Jayden Luke as part of the W01 assignment for web development. It features navigation, courses, and mission information for local businesses." />
+    <meta name="author" content="Jayden Luke" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- ✅ Header now includes Hero -->
     <header>
+        <div class="hero">
+            <img class="hero-image" src="chamber.jpg" alt="Timbuktu cityscape" />
+            <div class="hero-text">
+                <h1>Welcome to Timbuktu Chamber of Commerce</h1>
+                <p>Supporting Businesses. Building Community.</p>
+            </div>
+        </div>
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Events</a></li>
-                <li><a href="directory.html">Directory</a></li> <!-- This is the link to the directory page -->
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h1>Timbuktu Chamber of Commerce - Jayden Luke</h1>
+        <!-- Removed duplicate h1 here -->
+
         <section>
             <h2>About Us</h2>
             <p>Supporting local businesses and fostering community growth in Timbuktu.</p>
         </section>
+
         <section>
             <h2>Upcoming Events</h2>
             <ul>
@@ -37,18 +49,38 @@
                 <li>Annual Gala - July 15</li>
             </ul>
         </section>
+
         <section>
             <h2>Our Mission</h2>
             <p>To empower local businesses through community involvement and collaboration.</p>
         </section>
+
+        <section class="cta">
+            <a href="join.html" class="join-button">Join the Chamber</a>
+        </section>
+
+        <section id="weather">
+            <h2>Local Weather</h2>
+            <p id="current-temp">Temperature: --°F</p>
+            <p id="weather-description">Description: --</p>
+            <div id="forecast"></div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-cards" class="spotlight-cards">
+                <!-- JS will populate spotlights -->
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("lastModified").textContent = document.lastModified;
             document.getElementById("currentYear").textContent = new Date().getFullYear();
         });
