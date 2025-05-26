@@ -7,13 +7,16 @@
   <meta name="description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses in Timbuktu. Fill out the membership application form." />
   <meta name="author" content="Jayden Luke" />
   <link rel="icon" href="images/favicon.ico" />
+  
   <!-- Open Graph meta tags for social media -->
   <meta property="og:title" content="Join Timbuktu Chamber of Commerce" />
   <meta property="og:description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses." />
   <meta property="og:image" content="images/chamber-og-image.jpg" />
   <meta property="og:url" content="https://www.timbuktu-chamber.org/join.html" />
+  
   <!-- External CSS -->
   <link rel="stylesheet" href="styles/styles.css" />
+  
   <!-- External JS -->
   <script src="scripts/script.js" defer></script>
 </head>
@@ -44,27 +47,27 @@
       <h2>Membership Application</h2>
       <p>Fill out the form below to apply for membership in the Timbuktu Chamber of Commerce.</p>
 
-      <form action="thankyou.html" method="post" class="join-form">
+      <form action="thankyou.html" method="post" class="join-form" novalidate>
         <input type="hidden" name="formID" value="membershipApplication2025" />
 
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required />
+        <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
 
         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required />
+        <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
 
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" required autocomplete="email" />
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" />
+        <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+0-9\s\-]{7,15}" title="Phone number should contain only digits, spaces, + or - signs." />
 
         <label for="businessName">Business Name:</label>
-        <input type="text" id="businessName" name="businessName" required />
+        <input type="text" id="businessName" name="businessName" required autocomplete="organization" />
 
         <label for="membershipLevel">Membership Level:</label>
         <select id="membershipLevel" name="membershipLevel" required>
-          <option value="">--Select a Level--</option>
+          <option value="" disabled selected>--Select a Level--</option>
           <option value="bronze">Bronze</option>
           <option value="silver">Silver</option>
           <option value="gold">Gold</option>
@@ -79,8 +82,8 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
-    <p>Last modified: <span id="lastModified"></span></p>
+    <p>&copy; <span id="currentYear">2025</span> Timbuktu Chamber of Commerce</p>
+    <p>Last modified: <span id="lastModified">Unknown</span></p>
   </footer>
 
   <script>
@@ -88,7 +91,7 @@
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     // Insert last modified date of this document
-    document.getElementById('lastModified').textContent = document.lastModified;
+    document.getElementById('lastModified').textContent = document.lastModified || 'Unknown';
   </script>
 </body>
 </html>
