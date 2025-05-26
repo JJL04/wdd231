@@ -7,16 +7,16 @@
   <meta name="description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses in Timbuktu. Fill out the membership application form." />
   <meta name="author" content="Jayden Luke" />
   <link rel="icon" href="images/favicon.ico" />
-  
+
   <!-- Open Graph meta tags for social media -->
   <meta property="og:title" content="Join Timbuktu Chamber of Commerce" />
   <meta property="og:description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses." />
   <meta property="og:image" content="images/chamber-og-image.jpg" />
   <meta property="og:url" content="https://www.timbuktu-chamber.org/join.html" />
-  
+
   <!-- External CSS -->
   <link rel="stylesheet" href="styles/styles.css" />
-  
+
   <!-- External JS -->
   <script src="scripts/script.js" defer></script>
 </head>
@@ -32,10 +32,10 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="directory.html">Directory</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -43,38 +43,46 @@
   <main>
     <h1>Join Timbuktu Chamber of Commerce</h1>
 
-    <section>
+    <section aria-label="Membership Application Form">
       <h2>Membership Application</h2>
       <p>Fill out the form below to apply for membership in the Timbuktu Chamber of Commerce.</p>
 
       <form action="thankyou.html" method="post" class="join-form" novalidate>
         <input type="hidden" name="formID" value="membershipApplication2025" />
 
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
+        <fieldset>
+          <legend>Applicant Information</legend>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required autocomplete="email" />
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+0-9\s\-]{7,15}" title="Phone number should contain only digits, spaces, + or - signs." />
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
 
-        <label for="businessName">Business Name:</label>
-        <input type="text" id="businessName" name="businessName" required autocomplete="organization" />
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+0-9\s\-]{7,15}" title="Phone number should contain only digits, spaces, + or - signs." />
+        </fieldset>
 
-        <label for="membershipLevel">Membership Level:</label>
-        <select id="membershipLevel" name="membershipLevel" required>
-          <option value="" disabled selected>--Select a Level--</option>
-          <option value="bronze">Bronze</option>
-          <option value="silver">Silver</option>
-          <option value="gold">Gold</option>
-        </select>
+        <fieldset>
+          <legend>Business Information</legend>
 
-        <label for="description">Business Description:</label>
-        <textarea id="description" name="description" rows="4" placeholder="Tell us about your business..."></textarea>
+          <label for="businessName">Business Name:</label>
+          <input type="text" id="businessName" name="businessName" required autocomplete="organization" />
+
+          <label for="membershipLevel">Membership Level:</label>
+          <select id="membershipLevel" name="membershipLevel" required>
+            <option value="" disabled selected>--Select a Level--</option>
+            <option value="bronze">Bronze</option>
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+          </select>
+
+          <label for="description">Business Description:</label>
+          <textarea id="description" name="description" rows="4" placeholder="Tell us about your business..."></textarea>
+        </fieldset>
 
         <button type="submit">Submit Application</button>
       </form>
