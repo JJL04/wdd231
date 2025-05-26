@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Join the Chamber - Timbuktu Chamber of Commerce</title>
-  <meta name="description" content="Join the Timbuktu Chamber of Commerce to connect with local businesses and grow your network." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Timbuktu Chamber of Commerce | Timbuktu Chamber</title>
+  <meta name="description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses in Timbuktu. Fill out the membership application form." />
   <meta name="author" content="Jayden Luke" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
+  <link rel="icon" href="images/favicon.ico" />
+  <!-- Open Graph meta tags for social media -->
+  <meta property="og:title" content="Join Timbuktu Chamber of Commerce" />
+  <meta property="og:description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses." />
+  <meta property="og:image" content="images/chamber-og-image.jpg" />
+  <meta property="og:url" content="https://www.timbuktu-chamber.org/join.html" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <!-- External JS -->
+  <script src="scripts/script.js" defer></script>
 </head>
 <body>
   <header>
     <div class="hero">
-      <img class="hero-image" src="chamber.jpg" alt="Timbuktu cityscape" />
+      <img class="hero-image" src="images/chamber.jpg" alt="Timbuktu cityscape" />
       <div class="hero-text">
-        <!-- Removed the <h1> from here -->
         <p>Empowering Local Businesses</p>
       </div>
     </div>
@@ -33,7 +38,6 @@
   </header>
 
   <main>
-    <!-- <h1> as first element in main -->
     <h1>Join Timbuktu Chamber of Commerce</h1>
 
     <section>
@@ -78,5 +82,13 @@
     <p>&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
     <p>Last modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script>
+    // Insert current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Insert last modified date of this document
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
 </body>
 </html>
