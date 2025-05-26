@@ -95,11 +95,19 @@
   </footer>
 
   <script>
-    // Insert current year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", function () {
+      // Set current year
+      const currentYearSpan = document.getElementById('currentYear');
+      if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+      }
 
-    // Insert last modified date of this document
-    document.getElementById('lastModified').textContent = document.lastModified || 'Unknown';
+      // Set last modified date
+      const lastModifiedSpan = document.getElementById('lastModified');
+      if (lastModifiedSpan) {
+        lastModifiedSpan.textContent = document.lastModified;
+      }
+    });
   </script>
 </body>
 </html>
