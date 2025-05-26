@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Join the Chamber - Timbuktu Chamber of Commerce</title>
-  <meta name="description" content="Join the Timbuktu Chamber of Commerce to connect with local businesses and grow your network.">
-  <meta name="author" content="Jayden Luke">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Join the Timbuktu Chamber of Commerce to connect with local businesses and grow your network." />
+  <meta name="author" content="Jayden Luke" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Join the Timbuktu Chamber of Commerce" />
+  <meta property="og:description" content="Join the Timbuktu Chamber of Commerce to connect with local businesses and grow your network." />
+  <meta property="og:image" content="images/chamber-og-image.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/join.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
@@ -38,20 +48,22 @@
       <p>Fill out the form below to apply for membership in the Timbuktu Chamber of Commerce.</p>
 
       <form action="thankyou.html" method="post" class="join-form">
+        <input type="hidden" name="formID" value="membershipApplication2025" />
+
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
+        <input type="text" id="firstName" name="firstName" required />
 
         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required>
+        <input type="text" id="lastName" name="lastName" required />
 
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required />
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" />
 
         <label for="businessName">Business Name:</label>
-        <input type="text" id="businessName" name="businessName" required>
+        <input type="text" id="businessName" name="businessName" required />
 
         <label for="membershipLevel">Membership Level:</label>
         <select id="membershipLevel" name="membershipLevel" required>
