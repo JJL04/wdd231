@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     // === Footer: Set current year and last modified ===
     const currentYearEl = document.getElementById("currentYear");
+    const lastModifiedEl = document.getElementById("lastModified");
+
     if (currentYearEl) {
         currentYearEl.textContent = new Date().getFullYear();
     }
 
-    const lastModifiedEl = document.getElementById("lastModified");
     if (lastModifiedEl) {
         lastModifiedEl.textContent = document.lastModified;
     }
 
-    // === Course Filtering (if used on the page) ===
+    // === Course Data (optional usage) ===
     const courses = [
         { name: 'Business Strategy', category: 'business', credits: 3 },
         { name: 'Marketing 101', category: 'marketing', credits: 2 },
@@ -20,35 +21,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const courseList = document.getElementById("courseList");
 
-    const displayCourses = (filteredCourses) => {
+    function displayCourses(filteredCourses) {
         if (!courseList) return;
+
         courseList.innerHTML = '';
         filteredCourses.forEach(course => {
             const li = document.createElement('li');
             li.textContent = `${course.name} - ${course.credits} credits`;
             courseList.appendChild(li);
         });
-    };
-
-    if (courseList) {
-        displayCourses(courses);
     }
 
-    window.filterCourses = () => {
+    if (courseList) {
+        displayCourses(courses); // initial display
+    }
+
+    window.filterCourses = function () {
         const filterSelect = document.getElementById("courseFilter");
         if (!filterSelect) return;
 
-        const filterValue = filterSelect.value;
-        const filtered = filterValue === 'all'
+        const selected = filterSelect.value;
+        const filteredCourses = selected === 'all'
             ? courses
-            : courses.filter(course => course.category === filterValue);
+            : courses.filter(course => course.category === selected);
 
-        displayCourses(filtered);
+        displayCourses(filteredCourses);
     };
 
-    // === Weather Display Placeholder ===
-    // TODO: Add logic to fetch and display local weather data here
+    // === Weather Display (Placeholder) ===
+    // TODO: Add API call to fetch local weather data, and render it in a weather widget.
 
-    // === Spotlight Section Placeholder ===
-    // TODO: Add logic to fetch and display spotlight cards here
+    // === Spotlight Section (Placeholder) ===
+    // TODO: Add logic to fetch spotlight data and inject spotlight cards dynamically.
 });
