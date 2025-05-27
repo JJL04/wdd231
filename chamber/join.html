@@ -54,27 +54,27 @@
           <legend>Applicant Information</legend>
 
           <label for="firstName">First Name:</label>
-          <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
+          <input type="text" id="firstName" name="firstName" required aria-required="true" autocomplete="given-name" />
 
           <label for="lastName">Last Name:</label>
-          <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
+          <input type="text" id="lastName" name="lastName" required aria-required="true" autocomplete="family-name" />
 
           <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required autocomplete="email" />
+          <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" />
 
           <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+0-9\s\-]{7,15}" title="Phone number should contain only digits, spaces, + or - signs." />
+          <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+()0-9\s\-]{7,20}" title="Phone number should contain digits, spaces, parentheses, + or - signs." />
         </fieldset>
 
         <fieldset>
           <legend>Business Information</legend>
 
           <label for="businessName">Business Name:</label>
-          <input type="text" id="businessName" name="businessName" required autocomplete="organization" />
+          <input type="text" id="businessName" name="businessName" required aria-required="true" autocomplete="organization" />
 
           <label for="membershipLevel">Membership Level:</label>
-          <select id="membershipLevel" name="membershipLevel" required>
-            <option value="" disabled selected>--Select a Level--</option>
+          <select id="membershipLevel" name="membershipLevel" required aria-required="true">
+            <option value="">-- Select a Level --</option>
             <option value="bronze">Bronze</option>
             <option value="silver">Silver</option>
             <option value="gold">Gold</option>
@@ -91,7 +91,7 @@
 
   <footer>
     <p>&copy; <span id="currentYear">2025</span> Timbuktu Chamber of Commerce</p>
-    <p>Last modified: <span id="lastModified">Unknown</span></p>
+    <p>Last modified: <span id="lastModified">May 26, 2025</span></p>
   </footer>
 
   <script>
