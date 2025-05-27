@@ -63,7 +63,7 @@
           <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" />
 
           <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+()0-9\s\-]{7,20}" title="Phone number should contain digits, spaces, parentheses, + or - signs." />
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" pattern="[+()0-9\s\-]{7,20}" title="Phone number should contain digits, spaces, parentheses, + or - signs." />
         </fieldset>
 
         <fieldset>
@@ -84,7 +84,7 @@
           <textarea id="description" name="description" rows="4" placeholder="Tell us about your business..."></textarea>
         </fieldset>
 
-        <button type="submit">Submit Application</button>
+        <button type="submit" aria-label="Submit your membership application">Submit Application</button>
       </form>
     </section>
   </main>
