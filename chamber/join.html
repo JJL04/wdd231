@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join Timbuktu Chamber of Commerce | Timbuktu Chamber</title>
-  <meta name="description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses in Timbuktu. Fill out the membership application form." />
-  <meta name="author" content="Jayden Luke" />
-  <link rel="icon" href="images/favicon.ico" />
+  <meta name="description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses in Timbuktu. Fill out the membership application form.">
+  <meta name="author" content="Jayden Luke">
+  <link rel="icon" href="images/favicon.ico">
 
   <!-- Open Graph meta tags for social media -->
-  <meta property="og:title" content="Join Timbuktu Chamber of Commerce" />
-  <meta property="og:description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses." />
-  <meta property="og:image" content="images/chamber-og-image.jpg" />
-  <meta property="og:url" content="https://www.timbuktu-chamber.org/join.html" />
+  <meta property="og:title" content="Join Timbuktu Chamber of Commerce">
+  <meta property="og:description" content="Apply to join the Timbuktu Chamber of Commerce and connect with local businesses.">
+  <meta property="og:image" content="images/chamber-og-image.jpg">
+  <meta property="og:url" content="https://www.timbuktu-chamber.org/join.html">
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles.css">
 
   <!-- External JS -->
   <script src="script/script.js" defer></script>
@@ -23,7 +23,7 @@
 <body>
   <header>
     <div class="hero">
-      <img class="hero-image" src="images/chamber.jpg" alt="Timbuktu cityscape" />
+      <img class="hero-image" src="images/chamber.jpg" alt="Timbuktu cityscape">
       <div class="hero-text">
         <p>Empowering Local Businesses</p>
       </div>
@@ -48,32 +48,32 @@
       <p>Fill out the form below to apply for membership in the Timbuktu Chamber of Commerce.</p>
 
       <form action="thankyou.html" method="post" class="join-form" novalidate>
-        <input type="hidden" name="formID" value="membershipApplication2025" />
+        <input type="hidden" name="formID" value="membershipApplication2025">
 
         <fieldset>
           <legend>Applicant Information</legend>
 
           <label for="firstName">First Name:</label>
-          <input type="text" id="firstName" name="firstName" required aria-required="true" autocomplete="given-name" />
+          <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
 
           <label for="lastName">Last Name:</label>
-          <input type="text" id="lastName" name="lastName" required aria-required="true" autocomplete="family-name" />
+          <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
 
           <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" />
+          <input type="email" id="email" name="email" required autocomplete="email">
 
           <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required autocomplete="tel" pattern="[+()0-9\s\-]{7,20}" title="Phone number should contain digits, spaces, parentheses, + or - signs." />
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" pattern="[+()0-9\s\-]{7,20}" title="Phone number should contain digits, spaces, parentheses, + or - signs." aria-label="Phone number">
         </fieldset>
 
         <fieldset>
           <legend>Business Information</legend>
 
           <label for="businessName">Business Name:</label>
-          <input type="text" id="businessName" name="businessName" required aria-required="true" autocomplete="organization" />
+          <input type="text" id="businessName" name="businessName" required autocomplete="organization">
 
           <label for="membershipLevel">Membership Level:</label>
-          <select id="membershipLevel" name="membershipLevel" required aria-required="true">
+          <select id="membershipLevel" name="membershipLevel" required>
             <option value="">-- Select a Level --</option>
             <option value="bronze">Bronze</option>
             <option value="silver">Silver</option>
@@ -96,13 +96,13 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Set current year
+      // Set current year dynamically
       const currentYearSpan = document.getElementById('currentYear');
       if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
       }
 
-      // Set last modified date
+      // Set last modified date dynamically
       const lastModifiedSpan = document.getElementById('lastModified');
       if (lastModifiedSpan) {
         lastModifiedSpan.textContent = document.lastModified;
