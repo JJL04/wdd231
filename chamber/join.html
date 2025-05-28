@@ -19,6 +19,21 @@
 
   <!-- External JS -->
   <script src="script/script.js" defer></script>
+
+  <!-- Inline script to set date info -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const currentYearSpan = document.getElementById('currentYear');
+      if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+      }
+
+      const lastModifiedSpan = document.getElementById('lastModified');
+      if (lastModifiedSpan) {
+        lastModifiedSpan.textContent = document.lastModified;
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -93,21 +108,5 @@
     <p>&copy; <span id="currentYear">2025</span> Timbuktu Chamber of Commerce</p>
     <p>Last modified: <span id="lastModified">May 26, 2025</span></p>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Set current year dynamically
-      const currentYearSpan = document.getElementById('currentYear');
-      if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-      }
-
-      // Set last modified date dynamically
-      const lastModifiedSpan = document.getElementById('lastModified');
-      if (lastModifiedSpan) {
-        lastModifiedSpan.textContent = document.lastModified;
-      }
-    });
-  </script>
 </body>
 </html>
