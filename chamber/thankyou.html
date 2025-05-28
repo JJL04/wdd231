@@ -14,6 +14,11 @@
   <main role="main" aria-label="Thank You Message">
     <h1>Thank You for Joining!</h1>
     <p>Your application has been submitted. We’ll be in touch shortly.</p>
+
+    <section id="summary" aria-label="Submission Summary">
+      <!-- Submission details will be displayed here -->
+    </section>
+
     <a href="index.html">Back to Home</a>
   </main>
 
@@ -23,9 +28,30 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const yearSpan = document.getElementById('year');
+      // Set current year
+      const yearSpan = document.getElementById("year");
       if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
+      }
+
+      // Display form data from sessionStorage
+      const data = JSON.parse(sessionStorage.getItem("chamberFormData"));
+      const summary = document.getElementById("summary");
+
+      if (data && summary) {
+        summary.innerHTML = `
+          <h2>Submission Summary</h2>
+          <ul>
+            <li><strong>Name:</strong> ${data.firstName} ${data.lastName}</li>
+            <li><strong>Email:</strong> ${data.email}</li>
+            <li><strong>Phone:</strong> ${data.phone}</li>
+            <li><strong>Business Name:</strong> ${data.businessName}</li>
+            <li><strong>Membership Level:</strong> ${data.membershipLevel}</li>
+            <li><strong>Description:</strong> ${data.description || "N/A"}</li>
+          </ul>
+        `;
+      } else {
+        summary.innerHTML = `<p>No form data found. Please return to the <a href="join.html">application form</a>.</p>`;
       }
     });
   </script>
