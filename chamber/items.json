@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Timbuktu Library",
+    "address": "100 Historic Ln",
+    "description": "A treasure trove of ancient manuscripts.",
+    "image": "images/library.webp"
+  },
+  {
+    "name": "Sahara Market",
+    "address": "12 Desert Rd",
+    "description": "Local crafts and vibrant markets.",
+    "image": "images/market.webp"
+  },
+  {
+    "name": "Great Mosque",
+    "address": "1 Mosque Ave",
+    "description": "A historic site of architecture and worship.",
+    "image": "images/mosque.webp"
+  },
+  {
+    "name": "Camel Caravan Tours",
+    "address": "50 Oasis St",
+    "description": "Explore the desert on camelback.",
+    "image": "images/camels.webp"
+  },
+  {
+    "name": "Museum of Mali",
+    "address": "34 Culture Way",
+    "description": "Artifacts and history of West Africa.",
+    "image": "images/museum.webp"
+  },
+  {
+    "name": "Sand Dune Park",
+    "address": "88 Adventure Blvd",
+    "description": "Recreation and scenic beauty.",
+    "image": "images/dunes.webp"
+  },
+  {
+    "name": "Riverfront Walk",
+    "address": "200 Niger Blvd",
+    "description": "Peaceful strolls by the water.",
+    "image": "images/river.webp"
+  },
+  {
+    "name": "Local Food Court",
+    "address": "90 Spice Rd",
+    "description": "Enjoy Timbuktu’s culinary delights.",
+    "image": "images/food.webp"
+  }
+]

@@ -1,0 +1,24 @@
+@media (min-width: 641px) {
+  .cards-grid {
+    grid-template-areas:
+      "card card"
+      "card card";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card img:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media (min-width: 1025px) {
+  .cards-grid {
+    grid-template-areas:
+      "card card card"
+      "card card card"
+      "card card card";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
