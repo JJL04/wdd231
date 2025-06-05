@@ -1,36 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Discover | Timbuktu Chamber</title>
-  <meta name="description" content="Discover the beauty and culture of Timbuktu with our local highlights." />
-  <link rel="stylesheet" href="data/styles/styles.css" />
-  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)" />
-  <script defer src="discover.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the beauty and culture of Timbuktu with our local highlights." />
+  <meta name="author" content="Jayden Luke" />
+  <title>Discover | Timbuktu Chamber</title>
+
+  <!-- OG (Open Graph) Meta Tags -->
+  <meta property="og:title" content="Discover Timbuktu | Timbuktu Chamber" />
+  <meta property="og:description" content="See the cultural and natural highlights of Timbuktu, Mali." />
+  <meta property="og:image" content="images/discover-preview.webp" />
+  <meta property="og:url" content="https://jjl04.github.io/wdd231/chamber/discover.html" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)" />
+
 </head>
 <body>
-  <header>
-    <h1>Timbuktu Chamber of Commerce</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html" class="active">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header>
+    <h1>Timbuktu Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" aria-current="page" class="active">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main>
-    <aside id="visit-message"></aside>
+  <main>
+    <h1>Discover Timbuktu</h1>
 
-    <section class="cards-grid" id="cards-container">
-      <!-- Cards will load here from JSON -->
-    </section>
-  </main>
+    <aside id="visit-message"></aside>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
-  </footer>
+    <section class="cards-grid" id="cards-container">
+      <div class="card">
+        <img src="Images/Timbuktu Library.jpg" alt="Timbuktu Library" loading="lazy">
+        <h2>Timbuktu Library</h2>
+        <p>A treasure trove of ancient manuscripts.</p>
+        <p><strong>Address:</strong> 100 Historic Ln</p>
+      </div>
+
+      <div class="card">
+        <img src="Images/Sahara Market.jpg" alt="Sahara Market" loading="lazy">
+        <h2>Sahara Market</h2>
+        <p>Local crafts and vibrant markets.</p>
+        <p><strong>Address:</strong> 12 Desert Rd</p>
+      </div>
+
+      <div class="card">
+        <img src="Images/Great Mosque.jpg" alt="Great Mosque" loading="lazy">
+        <h2>Great Mosque</h2>
+        <p>A historic site of architecture and worship.</p>
+        <p><strong>Address:</strong> 1 Mosque Ave</p>
+      </div>
+
+      <div class="card">
+        <img src="Images/camel.jpg" alt="Camel Caravan Tours" loading="lazy">
+        <h2>Camel Caravan Tours</h2>
+        <p>Explore the desert on camelback.</p>
+        <p><strong>Address:</strong> 50 Oasis St</p>
+      </div>
+
+      <div class="card">
+        <img src="Images/Museum of Mali.jpg" alt="Museum of Mali" loading="lazy">
+        <h2>Museum of Mali</h2>
+        <p>Artifacts and history of West Africa.</p>
+        <p><strong>Address:</strong> 34 Culture Way</p>
+      </div>
+
+      <div class="card">
+        <img src="Images/Sand Dune Park.jpg" alt="Sand Dune Park" loading="lazy">
+        <h2>Sand Dune Park</h2>
+        <p>Recreation and scenic beauty.</p>
+        <p><strong>Address:</strong> 88 Adventure Blvd</p>
+      </div>
+
+      <div class="card">
+        <img src="Images/Riverfront Walk.jpg" alt="Riverfront Walk" loading="lazy">
+        <h2>Riverfront Walk</h2>
+        <p>Peaceful strolls by the water.</p>
+        <p><strong>Address:</strong> 200 Niger Blvd</p>
+      </div>
+
+      <div class="card">
+        <img src="Images/food.png" alt="Local Food Court" loading="lazy">
+        <h2>Local Food Court</h2>
+        <p>Enjoy Timbuktu’s culinary delights.</p>
+        <p><strong>Address:</strong> 90 Spice Rd</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
