@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Project - Home</title>
+  <meta name="description" content="Explore my responsive, accessible web project on [your topic]." />
+  <meta name="author" content="Jayden Luke" />
+  <link rel="icon" href="images/favicon.ico" />
+  <meta property="og:title" content="My Project" />
+  <meta property="og:description" content="Explore this fun site about [topic]" />
+  <meta property="og:image" content="images/share-image.jpg" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Project</h1>
+    <nav>
+      <button id="menu-button" aria-label="Toggle Menu">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Page 2</a></li>
+        <li><a href="page3.html">Page 3</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Dynamic Items</h2>
+      <div id="item-container"></div>
+    </section>
+    
+    <button id="open-modal">About</button>
+    <div id="myModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <p>This is a modal dialog!</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jayden Luke</p>
+    <a href="https://youtube.com/your-video-link" target="_blank">Video Demo</a>
+    <a href="attributions.html">Attributions</a>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

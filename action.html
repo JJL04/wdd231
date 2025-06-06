@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Submitted</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header><h1>Submission Received</h1></header>
+  <main>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Message:</strong> <span id="message"></span></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jayden Luke</p>
+    <a href="https://youtube.com/your-video-link" target="_blank">Video Demo</a>
+    <a href="attributions.html">Attributions</a>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("name").textContent = params.get("name");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("message").textContent = params.get("message");
+  </script>
+</body>
+</html>
