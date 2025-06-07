@@ -1,6 +1,6 @@
-import { loadItems } from './api.js';
-import { initModal } from './modal.js';
-import { saveUserPreference, loadUserPreference } from './storage.js';
+import { loadItems } from '../api.js';
+import { initModal } from '../modal.js';
+import { saveUserPreference, loadUserPreference } from '../storage.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const container = document.getElementById('item-container');
