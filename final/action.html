@@ -3,15 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Form Submitted</title>
+  <meta name="description" content="Thank you for submitting your feedback." />
+  <meta name="author" content="Jayden Luke" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <header><h1>Submission Received</h1></header>
+  <header>
+    <h1>Submission Received</h1>
+    <nav>
+      <button id="menu-button" aria-label="Toggle Menu">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">About</a></li>
+        <li><a href="page3.html">Gallery</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
-    <p><strong>Name:</strong> <span id="name"></span></p>
-    <p><strong>Email:</strong> <span id="email"></span></p>
-    <p><strong>Message:</strong> <span id="message"></span></p>
+    <section>
+      <h2>Thank You for Your Feedback!</h2>
+      <p><strong>Name:</strong> <span id="name"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Message:</strong> <span id="message"></span></p>
+    </section>
   </main>
 
   <footer>
@@ -26,5 +46,7 @@
     document.getElementById("email").textContent = params.get("email");
     document.getElementById("message").textContent = params.get("message");
   </script>
+
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

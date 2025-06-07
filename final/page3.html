@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Project - Gallery</title>
-  <meta name="description" content="View the gallery or extra content related to this site." />
+
+  <title>Nature Photography - Gallery</title>
+
+  <meta name="description" content="View a collection of nature photographs featured in this project." />
   <meta name="author" content="Jayden Luke" />
-  <link rel="icon" href="images/favicon.ico.png" />
+
+  <!-- ✅ Correct favicon file type -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
   <header>
     <h1>Gallery</h1>
     <nav>
-      <button id="menu-button">☰</button>
+      <button id="menu-button" aria-label="Toggle Menu">☰</button>
       <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="page2.html">About</a></li>
-        <li><a href="page3.html">Gallery</a></li>
+        <li><a href="page3.html" class="active">Gallery</a></li>
         <li><a href="form.html">Form</a></li>
       </ul>
     </nav>
@@ -26,8 +31,14 @@
   <main>
     <section>
       <h2>Image Collection</h2>
-      <img src="images/item1.jpeg" alt="Example 1" loading="lazy" />
-      <img src="images/item2.jpg" alt="Example 2" loading="lazy" />
+      <figure>
+        <img src="images/item1.jpeg" alt="Mountain Landscape" loading="lazy" />
+        <figcaption>Example 1 - Peaceful Mountain</figcaption>
+      </figure>
+      <figure>
+        <img src="images/item2.jpg" alt="Lush Forest" loading="lazy" />
+        <figcaption>Example 2 - Deep Forest Trail</figcaption>
+      </figure>
     </section>
   </main>
 
@@ -37,6 +48,7 @@
     <a href="attributions.html">Attributions</a>
   </footer>
 
-  <script type="module" src="script/main.js"></script>
+  <!-- ✅ Corrected script path -->
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
