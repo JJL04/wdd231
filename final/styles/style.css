@@ -1,5 +1,11 @@
+/* Global box-sizing for easier sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   line-height: 1.6;
   background-color: #fff;
@@ -10,15 +16,34 @@ header, nav, main, footer {
   padding: 1rem;
 }
 
+/* Navigation Menu */
 nav ul {
   display: none;
   flex-direction: column;
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+/* Menu toggle class to show nav */
+nav ul.show {
+  display: flex;
 }
 
 #menu-button {
   display: inline-block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  color: #222;
+}
+
+/* Focus style for accessibility */
+#menu-button:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
 }
 
 @media (min-width: 768px) {
@@ -33,26 +58,54 @@ nav ul {
   }
 }
 
+/* Card style */
 .card {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;  /* softer border */
   padding: 1rem;
   margin: 1rem 0;
+  border-radius: 6px; /* subtle rounding */
+  background-color: #fafafa;
 }
 
+/* Modal styles */
 .modal {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  display: flex; justify-content: center; align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
   background: white;
   padding: 2rem;
   max-width: 500px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: relative;
 }
 
+/* Example close button inside modal-content */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal-close:hover {
+  color: #222;
+}
+
+/* Hidden helper class */
 .hidden {
-  display: none;
+  display: none !important;
 }

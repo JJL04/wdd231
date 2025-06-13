@@ -4,6 +4,7 @@ import { saveUserPreference, loadUserPreference } from '../storage.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const container = document.getElementById('item-container');
+  
   try {
     const items = await loadItems();
     items.forEach(item => {
@@ -22,5 +23,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error(error);
   }
 
+  // Initialize modal functionality
   initModal();
+
+  // Responsive menu toggle
+  const menuButton = document.getElementById('menu-button');
+  const navLinks = document.getElementById('nav-links');
+
+  if (menuButton && navLinks) {
+    menuButton.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
 });

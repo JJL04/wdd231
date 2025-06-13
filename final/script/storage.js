@@ -1,7 +1,17 @@
 export function saveUserPreference(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (error) {
+    console.error(`Failed to save preference "${key}":`, error);
+  }
 }
 
 export function loadUserPreference(key) {
-  return JSON.parse(localStorage.getItem(key));
+  try {
+    const item = localStorage.getItem(key);
+    return item ? JSON.parse(item) : null;
+  } catch (error) {
+    console.error(`Failed to load preference "${key}":`, error);
+    return null;
+  }
 }
