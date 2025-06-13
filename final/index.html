@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Nature Photography - Home</title>
+
   <meta name="description" content="Explore stunning nature photography through a responsive and accessible web experience." />
   <meta name="author" content="Jayden Luke" />
 
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
+  <!-- Open Graph (for link previews) -->
   <meta property="og:title" content="Nature Photography" />
   <meta property="og:description" content="Explore this fun site about nature photography and more." />
   <meta property="og:image" content="https://jjl04.github.io/wdd231/final/images/share-image.jpg" />
   <meta property="og:url" content="https://jjl04.github.io/wdd231/final/" />
 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
@@ -23,9 +26,9 @@
     <nav>
       <button id="menu-button" aria-label="Toggle Menu">☰</button>
       <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="page2.html">Page 2</a></li>
-        <li><a href="page3.html">Page 3</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="page2.html">About</a></li>
+        <li><a href="page3.html">Gallery</a></li>
         <li><a href="form.html">Form</a></li>
       </ul>
     </nav>
@@ -34,28 +37,34 @@
   <main>
     <section>
       <h2>Dynamic Items</h2>
-      <div id="item-container"></div>
+      <div id="item-container">
+        <!-- JavaScript will dynamically insert at least 15 items here -->
+      </div>
     </section>
 
-    <button id="open-modal">About</button>
-    <div id="myModal" class="modal hidden">
-      <div class="modal-content">
-        <span id="close-modal">&times;</span>
-        <p>This is a modal dialog!</p>
+    <section>
+      <h2>About This Site</h2>
+      <button id="open-modal">Learn More</button>
+      <div id="myModal" class="modal hidden">
+        <div class="modal-content">
+          <span id="close-modal">&times;</span>
+          <p>This project showcases the peaceful beauty of nature captured through photography. Explore the pages and enjoy!</p>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Jayden Luke</p>
     <p>
-      🎥 <strong><a href="https://youtu.be/ITm0UAfDXPc" target="_blank">
+      🎥 <strong><a href="https://youtu.be/ITm0UAfDXPc" target="_blank" rel="noopener noreferrer">
         Watch Video Demonstration of this Website
       </a></strong>
     </p>
     <p><a href="attributions.html">Attributions</a></p>
   </footer>
 
+  <!-- JavaScript Module -->
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
