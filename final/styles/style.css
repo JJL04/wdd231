@@ -25,9 +25,14 @@ nav ul {
   margin: 0;
 }
 
-/* Menu toggle class to show nav */
 nav ul.show {
   display: flex;
+}
+
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #007acc;
 }
 
 #menu-button {
@@ -40,7 +45,6 @@ nav ul.show {
   color: #222;
 }
 
-/* Focus style for accessibility */
 #menu-button:focus {
   outline: 2px solid #007acc;
   outline-offset: 2px;
@@ -58,16 +62,14 @@ nav ul.show {
   }
 }
 
-/* Card style */
 .card {
-  border: 1px solid #ddd;  /* softer border */
+  border: 1px solid #ddd;
   padding: 1rem;
   margin: 1rem 0;
-  border-radius: 6px; /* subtle rounding */
+  border-radius: 6px;
   background-color: #fafafa;
 }
 
-/* Modal styles */
 .modal {
   position: fixed;
   top: 0; left: 0;
@@ -89,7 +91,6 @@ nav ul.show {
   position: relative;
 }
 
-/* Example close button inside modal-content */
 .modal-close {
   position: absolute;
   top: 1rem;
@@ -105,7 +106,6 @@ nav ul.show {
   color: #222;
 }
 
-/* Hidden helper class */
 .hidden {
   display: none !important;
 }
